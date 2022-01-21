@@ -7,7 +7,7 @@
     <title>{{ $title }}</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
-<body class="font-sans bg-gray-900">
+<body class="font-sans bg-gray-900 text-white">
     <x-navbar />
     <main id="app">
         {{ $slot }}
