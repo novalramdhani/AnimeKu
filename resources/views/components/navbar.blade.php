@@ -12,6 +12,9 @@
                 <a href="" class="hover:text-gray-300 transition">Anime List</a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
+                <a href="" class="hover:text-gray-300 transition">Up Coming Anime</a>
+            </li>
+            <li class="md:ml-6 mt-3 md:mt-0">
                 <a href="" class="hover:text-gray-300 transition">Characters</a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
