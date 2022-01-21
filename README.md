@@ -23,4 +23,4 @@ see [Movie Cast](https://movie-cast.herokuapp.com) alternative from Ani Cast abo
 - Alpine.js
 
 ## License
-This project licensed under the MIT LICENSE.
+This project licensed under the [MIT LICENSE.]()
