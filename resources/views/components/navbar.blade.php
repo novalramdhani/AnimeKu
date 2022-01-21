@@ -1,0 +1,31 @@
+<nav class="border-b border-gray-800 uppercase text-white">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between px-4 py-6">
+        <ul class="flex flex-col md:flex-row items-center">
+            <li>
+                <a href="">
+                    <div class="text-lg text-3xl font-semibold">
+                        <h1>{{ config('app.name') }}</h1>
+                    </div>
+                </a>
+            </li>
+            <li class="md:ml-16 mt-3 md:mt-0">
+                <a href="" class="hover:text-gray-300 transition">Anime List</a>
+            </li>
+            <li class="md:ml-6 mt-3 md:mt-0">
+                <a href="" class="hover:text-gray-300 transition">Characters</a>
+            </li>
+            <li class="md:ml-6 mt-3 md:mt-0">
+                <a href="" class="hover:text-gray-300 transition">Peoples</a>
+            </li>
+            <li class="md:ml-6 mt-3 md:mt-0">
+                <a href="" class="hover:text-gray-300 transition">News</a>
+            </li>
+        </ul>
+        <div class="flex flex-col md:flex-row items-center">
+            {{-- <livewire:search-dropdown /> --}}
+            <div class="md:ml-4 mt-3 md:mt-0">
+                <img src="https://i.pravatar.cc/150" alt="Avatar" class="rounded-full h-8 w-8">
+            </div>
+        </div>
+    </div>
+</nav>
