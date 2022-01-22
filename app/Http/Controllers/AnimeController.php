@@ -16,7 +16,9 @@ class AnimeController extends Controller
     public function index()
     {
         $upComing = collect($this->anime->fetch('seasons/upcoming')
-                                ->json()['data'])->take(10);
+                                ->json()['data'])
+                                ->take(5)
+                                ->sortByDesc('popularity');
 
         $recommendations = collect($this->anime->fetch('recommendations/anime')
                                 ->json()['data']);

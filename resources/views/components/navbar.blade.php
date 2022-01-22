@@ -2,7 +2,7 @@
     <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between px-4 py-6">
         <ul class="flex flex-col md:flex-row items-center">
             <li>
-                <a href="">
+                <a href="{{ route('anime.index') }}">
                     <div class="text-lg text-3xl font-semibold">
                         <h1>{{ config('app.name') }}</h1>
                     </div>

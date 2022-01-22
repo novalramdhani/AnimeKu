@@ -13,22 +13,38 @@
                     </span>
                     <span class="ml-1">{{ isset($anime['score']) ? $anime['score'] : 'Unknown' }}</span>
                     <span class="mx-2">|</span>
-                    <span>{{ isset($anime['spring']) ? $anime['season'] . $anime['year'] : 'Unknown' }}</span>
+                    <span>{{ $anime['season'] }} {{ $anime['year'] }}</span>
                     <span class="mx-2">|</span>
-                    <span>Romance, Harem, Fantasy</span>
+                    <span>
+                        @forelse ($anime['genres'] as $genre)
+                            {{ $genre['name'] . ', ' }}
+                        @empty
+                            Unknown
+                        @endforelse
+                    </span>
                 </div>
 
                 <div class="mt-3">
                     <div class="flex text-sm text-gray-300 font-semibold mt-4">
-                        {{-- <div class="mr-8">
+                        <div class="mr-8">
                             <div>Type: {{ $anime['type'] }}</div>
                             <div class="mt-2">Status: {{ $anime['status'] }}</div>
-                            <div class="mt-2">Episodes: {{ $anime['episodes'] }}</div>
+                            <div class="mt-2">Episodes: {{ isset($anime['episodes']) ? $anime['episodes'] : 'Unknown' }}</div>
                             <div class="mt-2">Duration: {{ $anime['duration'] }}</div>
                             <div class="mt-2">Rating: {{ $anime['rating'] }}</div>
-                            <div class="mt-2">Producer: {{ $anime['producers'] }}</div>
-                            <div class="mt-2">Studio: {{ $anime['studios'][0]['name'] }}</div>
-                        </div> --}}
+                            <div class="mt-2">Producer:
+                                @foreach ($anime['producers'] as $producer)
+                                    {{ $producer['name'] . ', ' }}
+                                @endforeach
+                            </div>
+                            <div class="mt-2">Studio:
+                                @forelse ($anime['studios'] as $studio)
+                                    {{ $studio['name'] . ', ' }}
+                                @empty
+                                    Unknown
+                                @endforelse
+                            </div>
+                        </div>
                     </div>
                 </div>
 

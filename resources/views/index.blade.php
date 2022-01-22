@@ -26,11 +26,11 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 @foreach ($recommendations as $recommendation)
                     <div class="mt-8">
-                        <a href="">
+                        <a href="{{ route('anime.show', $recommendation['entry'][0]['mal_id']) }}">
                             <img src="{{ $recommendation['entry'][0]['images']['jpg']['image_url'] }}" alt="example" class="hover:opacity-75 transition case-in-out duration-150 h-80 w-80">
                         </a>
                         <div class="mt-2">
-                            <a href="" class="text-lg mt-2 text-white hover:text-gray-300">{{ $recommendation['entry'][0]['title'] }}</a>
+                            <a href="{{ route('anime.show', $recommendation['entry'][0]['mal_id']) }}" class="text-lg mt-2 text-white hover:text-gray-300">{{ $recommendation['entry'][0]['title'] }}</a>
                         </div>
                     </div>
                 @endforeach
