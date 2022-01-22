@@ -32,7 +32,13 @@ class AnimeController extends Controller
     public function show($id)
     {
         $anime = collect($this->anime->fetch("anime/{$id}")->json()['data']);
+        $characters = collect($this->anime->fetch("anime/{$id}/characters")->json()['data']);
+        $peoples = collect($this->anime->fetch("anime/{$id}/staff")->json()['data']);
 
-        return view('show', ['anime' => $anime]);
+        return view('show', [
+            'anime' => $anime,
+            'characters' => $characters,
+            'peoples' => $peoples
+        ]);
     }
 }
