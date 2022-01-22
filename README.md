@@ -1,7 +1,7 @@
 # Ani Cast
 Ani Cast - Anime List & Trending App. (Powered by [Jikan API](https://docs.api.jikan.moe/))
 
-see [Movie Cast](https://movie-cast.herokuapp.com) alternative from Ani Cast about movie website.
+see [Movie Cast](http://movie-cast.herokuapp.com) alternative from Ani Cast about movie website.
 
 ## Demo
 

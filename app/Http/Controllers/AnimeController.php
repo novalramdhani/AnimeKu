@@ -26,4 +26,11 @@ class AnimeController extends Controller
             'recommendations' => $recommendations
         ]);
     }
+
+    public function show($id)
+    {
+        $anime = collect($this->anime->fetch("anime/{$id}")->json()['data']);
+
+        return view('show', ['anime' => $anime]);
+    }
 }
