@@ -1,4 +1,4 @@
-<nav class="border-b border-gray-800 uppercase text-white">
+<nav class="border-b border-gray-800 text-white">
     <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between px-4 py-6">
         <ul class="flex flex-col md:flex-row items-center">
             <li>
@@ -25,7 +25,7 @@
             </li>
         </ul>
         <div class="flex flex-col md:flex-row items-center">
-            {{-- <livewire:search-dropdown /> --}}
+            <livewire:search-dropdown />
             <div class="md:ml-4 mt-3 md:mt-0">
                 <img src="https://i.pravatar.cc/150" alt="Avatar" class="rounded-full h-8 w-8">
             </div>
