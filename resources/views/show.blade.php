@@ -95,7 +95,7 @@
         <div class="container mx-auto px-4 py-16">
             <h2 class="text-4xl font-semibold">Characters</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                @foreach ($characters as $character)
+                @forelse ($characters as $character)
                     <div class="mt-8">
                         <a href="">
                             <img src="{{ $character['character']['images']['jpg']['image_url'] }}" alt="actor" class="hover:opacity-75 transition ease-in-out w-80 h-80 duration-150">
@@ -107,7 +107,9 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @empty
+                    <div class="text-lg font-semibold">No characters yet.</div>
+                @endforelse
             </div>
         </div>
     </div>
@@ -116,7 +118,7 @@
         <div class="container mx-auto px-4 py-16">
             <h2 class="text-4xl font-semibold">Staff</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                @foreach ($peoples as $staff)
+                @forelse ($peoples as $staff)
                     <div class="mt-8">
                         <a href="">
                             <img src="{{ $staff['person']['images']['jpg']['image_url'] }}" alt="actor" class="hover:opacity-75 transition ease-in-out duration-150 w-80 h-80">
@@ -130,7 +132,9 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                @empty
+                    <div class="text-lg mt-5 font-semibold">No characters yet.</div>
+                @endforelse
             </div>
         </div>
     </div>
