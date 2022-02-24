@@ -18,7 +18,7 @@
                 <a href="{{ route('anime.tops') }}" class="hover:text-gray-300 transition">Top Anime</a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
-                <a href="" class="hover:text-gray-300 transition">Characters</a>
+                <a href="{{ route('anime.characters') }}" class="hover:text-gray-300 transition">Characters</a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
                 <a href="" class="hover:text-gray-300 transition">News</a>
