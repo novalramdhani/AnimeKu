@@ -9,16 +9,16 @@
                 </a>
             </li>
             <li class="md:ml-16 mt-3 md:mt-0">
-                <a href="" class="hover:text-gray-300 transition">Anime List</a>
+                <a href="" class="hover:text-gray-300 transition">On Going</a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
-                <a href="" class="hover:text-gray-300 transition">Up Coming Anime</a>
+                <a href="{{ route('anime.seasons') }}" class="hover:text-gray-300 transition">Seasons</a>
+            </li>
+            <li class="md:ml-6 mt-3 md:mt-0">
+                <a href="{{ route('anime.tops') }}" class="hover:text-gray-300 transition">Top Anime</a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
                 <a href="" class="hover:text-gray-300 transition">Characters</a>
-            </li>
-            <li class="md:ml-6 mt-3 md:mt-0">
-                <a href="" class="hover:text-gray-300 transition">Peoples</a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
                 <a href="" class="hover:text-gray-300 transition">News</a>

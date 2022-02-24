@@ -23,7 +23,7 @@ class AnimeController extends Controller
         $recommendations = collect($this->anime->fetch('recommendations/anime')
                                 ->json()['data']);
 
-        return view('index', [
+        return view('anime.index', [
             'upComing' => $upComing,
             'recommendations' => $recommendations
         ]);
@@ -35,7 +35,7 @@ class AnimeController extends Controller
         $characters = collect($this->anime->fetch("anime/{$id}/characters")->json()['data']);
         $peoples = collect($this->anime->fetch("anime/{$id}/staff")->json()['data']);
 
-        return view('show', [
+        return view('anime.show', [
             'anime' => $anime,
             'characters' => $characters,
             'peoples' => $peoples
