@@ -1,7 +1,7 @@
 <x-app-layout title="Ani Cast - Anime Characters">
     <div class="container px-4 pt-16">
         <div class="characters-anime">
-            <h1 class="uppercase tracking-wider text-purple-600 text-lg font-semibold">Characters Anime</h1>
+            <h1 class="uppercase tracking-wider text-yellow-500 text-lg font-semibold">Characters Anime</h1>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 @foreach ($characters as $character)
                     <div class="characters mt-8">
