@@ -14,7 +14,6 @@
             </div>
         </div>
     </div>
-</x-app-layout>
 @push('scripts')
 <script src="https://unpkg.com/infinite-scroll@4/dist/infinite-scroll.pkgd.min.js"></script>
 <script>
@@ -27,3 +26,4 @@
     });
 </script>
 @endpush
+</x-app-layout>

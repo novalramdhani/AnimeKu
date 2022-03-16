@@ -14,14 +14,14 @@ class AnimeCharactersController extends Controller
         $this->anime = $anime;
     }
 
-    public function characters($page = 1)
+    public function index($page = 1)
     {
         abort_if($page > 2337, 204);
 
         $characters = collect($this->anime->fetch("characters?page=$page")
                     ->json()['data']);
 
-        return view('anime.characters', [
+        return view('characters.index', [
             'characters' => $characters,
             'previous' => $this->previous(),
             'next' => $this->next()
