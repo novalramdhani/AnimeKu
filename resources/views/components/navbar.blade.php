@@ -9,6 +9,9 @@
                 </a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
+                <a href="{{ route('anime.list') }}" class="hover:text-gray-300 transition">Anime Shows</a>
+            </li>
+            <li class="md:ml-6 mt-3 md:mt-0">
                 <a href="{{ route('anime.seasons') }}" class="hover:text-gray-300 transition">Seasons</a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
@@ -16,9 +19,6 @@
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
                 <a href="{{ route('anime.characters') }}" class="hover:text-gray-300 transition">Characters</a>
-            </li>
-            <li class="md:ml-6 mt-3 md:mt-0">
-                <a href="" class="hover:text-gray-300 transition">News</a>
             </li>
         </ul>
         <div class="flex flex-col md:flex-row items-center">

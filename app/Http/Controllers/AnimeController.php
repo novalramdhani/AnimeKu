@@ -13,6 +13,12 @@ class AnimeController extends Controller
         $this->anime = $anime;
     }
 
+    public function anime()
+    {
+        dd(collect($this->anime->fetch('anime')
+                    ->json()));
+    }
+
     public function index()
     {
         $upComing = collect($this->anime->fetch('seasons/upcoming')

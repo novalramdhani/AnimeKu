@@ -18,7 +18,7 @@ class AnimeCharactersController extends Controller
     {
         abort_if($page > 2337, 204);
 
-        $characters = collect($this->anime->fetch("characters?page=$page")
+        $characters = collect($this->anime->fetch("characters?=$page")
                     ->json()['data']);
 
         return view('characters.index', [

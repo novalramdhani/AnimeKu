@@ -7,6 +7,7 @@ use App\Http\Controllers\AnimeSeasonsController;
 use App\Http\Controllers\AnimeCharactersController;
 
 Route::get('/', [AnimeController::class, 'index'])->name('anime.index');
+Route::get('/anime', [AnimeController::class, 'anime'])->name('anime.list');
 Route::get('/anime/{id}', [AnimeController::class, 'show'])->name('anime.show');
 
 Route::get('/seasons', [AnimeSeasonsController::class, 'seasons'])->name('anime.seasons');

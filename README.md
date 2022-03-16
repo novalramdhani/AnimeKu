@@ -4,6 +4,7 @@ Ani Cast - Anime Shows App. (Powered by [Jikan API](https://docs.api.jikan.moe/)
 see [Movie Cast](http://movie-cast.herokuapp.com) alternative from Ani Cast about movie website.
 
 ## Demo
+[Live Preview]()
 
 ## Features
 - List anime (with)
