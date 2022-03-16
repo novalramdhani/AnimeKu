@@ -12,12 +12,12 @@ class AnimeTopController extends Controller
         $this->anime = $anime;
     }
 
-    public function tops()
+    public function trendings()
     {
         $topAnime = collect($this->anime->fetch('top/anime')
                             ->json()['data']);
 
-        return view('anime.top', [
+        return view('anime.trendings', [
             'topAnime' => $topAnime
         ]);
     }

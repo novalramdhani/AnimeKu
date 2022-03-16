@@ -1,7 +1,7 @@
-<x-app-layout title="Ani Cast - Top Anime">
+<x-app-layout title="Ani Cast - Trendings Anime">
     <div class="container px-4 pt-16">
-        <div class="top-anime">
-            <h1 class="uppercase tracking-wider text-purple-600 text-lg font-semibold">Top Anime</h1>
+        <div class="trendings-anime">
+            <h1 class="uppercase tracking-wider text-purple-600 text-lg font-semibold">Trendings Anime</h1>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 @foreach ($topAnime as $top)
                     <div class="mt-8">

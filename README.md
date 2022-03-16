@@ -7,13 +7,13 @@ see [Movie Cast](http://movie-cast.herokuapp.com) alternative from Ani Cast abou
 
 ## Features
 - List anime (with)
-    - trending anime
-    - upcoming anime
-    - popular anime
-    - recomendation anime
+    - Trending anime
+    - Upcoming anime
+    - Popular anime
+    - Recomendation anime
 - Detail anime
 - List characters
-- List seiyuu (people voice)
+    - Detail characters
 - Search anime
 
 ## Tech Stack
