@@ -7,18 +7,13 @@ use App\Services\AnimeService;
 
 class AnimeSeasonsController extends Controller
 {
-    public function __construct(public AnimeService $anime)
-    {
-        $this->anime = $anime;
-    }
-
     public function seasons()
     {
-        $upComingList = collect($this->anime->fetch('seasons/upcoming')
+        $upComingList = collect(AnimeService::fetch('seasons/upcoming')
                                 ->json()['data'])
                                 ->sortByDesc('popularity');
 
-        $nowList = collect($this->anime->fetch('seasons/now')
+        $nowList = collect(AnimeService::fetch('seasons/now')
                                 ->json()['data'])
                                 ->sortByDesc('popularity');
 

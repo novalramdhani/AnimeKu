@@ -13,4 +13,4 @@ Route::get('/seasons', [AnimeSeasonsController::class, 'seasons'])->name('anime.
 Route::get('/trendings', [AnimeTopController::class, 'trendings'])->name('anime.trendings');
 
 Route::get('/characters', [AnimeCharactersController::class, 'index'])->name('anime.characters');
-Route::get('/characters?page={page?}', [AnimeCharactersController::class, 'index'])->name('anime.characters');
+Route::get('/characters?page={page?}', [AnimeCharactersController::class, 'index']);

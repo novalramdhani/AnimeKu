@@ -9,16 +9,11 @@ class AnimeCharactersController extends Controller
 {
     public $page;
 
-    public function __construct(public AnimeService $anime)
-    {
-        $this->anime = $anime;
-    }
-
     public function index($page = 1)
     {
         abort_if($page > 2337, 204);
 
-        $characters = collect($this->anime->fetch("characters?=$page")
+        $characters = collect(AnimeService::fetch("characters?page={$page}")
                     ->json()['data']);
 
         return view('characters.index', [

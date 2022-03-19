@@ -4,23 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Services\AnimeService;
-use Illuminate\Support\Facades\Http;
 
 class AnimeController extends Controller
 {
-    public function __construct(public AnimeService $anime)
-    {
-        $this->anime = $anime;
-    }
-
     public function index()
     {
-        $upComing = collect($this->anime->fetch('seasons/upcoming')
+        $upComing = collect(AnimeService::fetch('seasons/upcoming')
                                 ->json()['data'])
                                 ->take(5)
                                 ->sortByDesc('popularity');
 
-        $recommendations = collect($this->anime->fetch('recommendations/anime')
+        $recommendations = collect(AnimeService::fetch('recommendations/anime')
                                 ->json()['data']);
 
         return view('anime.index', [
@@ -31,9 +25,9 @@ class AnimeController extends Controller
 
     public function show($id)
     {
-        $anime = collect($this->anime->fetch("anime/{$id}")->json()['data']);
-        $characters = collect($this->anime->fetch("anime/{$id}/characters")->json()['data']);
-        $peoples = collect($this->anime->fetch("anime/{$id}/staff")->json()['data']);
+        $anime = collect(AnimeService::fetch("anime/{$id}")->json()['data']);
+        $characters = collect(AnimeService::fetch("anime/{$id}/characters")->json()['data']);
+        $peoples = collect(AnimeService::fetch("anime/{$id}/staff")->json()['data']);
 
         return view('anime.show', [
             'anime' => $anime,
