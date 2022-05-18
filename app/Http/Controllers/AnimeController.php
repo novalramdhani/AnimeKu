@@ -2,19 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Services\AnimeService;
+use Illuminate\Support\Facades\Http;
 
 class AnimeController extends Controller
 {
     public function index()
     {
-        $upComing = collect(AnimeService::fetch('seasons/upcoming')
+        $upComing = collect(Http::jikan()->get('seasons/upcoming')
                                 ->json()['data'])
                                 ->take(5)
                                 ->sortByDesc('popularity');
 
-        $recommendations = collect(AnimeService::fetch('recommendations/anime')
+        $recommendations = collect(Http::jikan()->get('recommendations/anime')
                                 ->json()['data']);
 
         return view('anime.index', [
@@ -25,9 +24,9 @@ class AnimeController extends Controller
 
     public function show($id)
     {
-        $anime = collect(AnimeService::fetch("anime/{$id}")->json()['data']);
-        $characters = collect(AnimeService::fetch("anime/{$id}/characters")->json()['data']);
-        $peoples = collect(AnimeService::fetch("anime/{$id}/staff")->json()['data']);
+        $anime = collect(Http::jikan()->get("anime/{$id}")->json()['data']);
+        $characters = collect(Http::jikan()->get("anime/{$id}/characters")->json()['data']);
+        $peoples = collect(Http::jikan()->get("anime/{$id}/staff")->json()['data']);
 
         return view('anime.show', [
             'anime' => $anime,

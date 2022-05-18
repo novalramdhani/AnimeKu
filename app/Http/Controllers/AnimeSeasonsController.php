@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Services\AnimeService;
+use Illuminate\Support\Facades\Http;
 
 class AnimeSeasonsController extends Controller
 {
     public function seasons()
     {
-        $upComingList = collect(AnimeService::fetch('seasons/upcoming')
+        $upComingList = collect(Http::jika()->get('seasons/upcoming')
                                 ->json()['data'])
                                 ->sortByDesc('popularity');
 
-        $nowList = collect(AnimeService::fetch('seasons/now')
+        $nowList = collect(Http::jikan()->get('seasons/now')
                                 ->json()['data'])
                                 ->sortByDesc('popularity');
 

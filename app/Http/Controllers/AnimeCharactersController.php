@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Services\AnimeService;
+use Illuminate\Support\Facades\Http;
 
 class AnimeCharactersController extends Controller
 {
@@ -13,7 +12,7 @@ class AnimeCharactersController extends Controller
     {
         abort_if($page > 2337, 204);
 
-        $characters = collect(AnimeService::fetch("characters?page={$page}")
+        $characters = collect(Http::jikan()->get("characters?page={$page}")
                     ->json()['data']);
 
         return view('characters.index', [
