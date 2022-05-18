@@ -1,4 +1,4 @@
-<nav class="border-b border-gray-800 text-white">
+z<nav class="border-b border-gray-800 text-white">
     <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between px-4 py-6">
         <ul class="flex flex-col md:flex-row items-center">
             <li>
@@ -12,7 +12,7 @@
                 <a href="{{ route('anime.seasons') }}" class="hover:text-gray-300 transition">Seasons</a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
-                <a href="{{ route('anime.trendings') }}" class="hover:text-gray-300 transition">Anime Trending</a>
+                <a href="{{ route('anime.trendings') }}" class="hover:text-gray-300 transition">Trendings</a>
             </li>
             <li class="md:ml-6 mt-3 md:mt-0">
                 <a href="{{ route('anime.characters') }}" class="hover:text-gray-300 transition">Characters</a>
